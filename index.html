@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek | Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles for a sleeker look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark blue-gray */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+        .card {
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid #374151;
+        }
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+            padding-bottom: 0;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.5rem;
+            top: 0;
+            height: 1rem;
+            width: 1rem;
+            background-color: #38bdf8;
+            border-radius: 9999px;
+            border: 2px solid #111827;
+        }
+    </style>
+</head>
+<body class="text-gray-300">
+
+    <!-- Header Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold gradient-text">Abhishek</a>
+                </div>
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="text-gray-300 hover:text-sky-400 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#education" class="text-gray-300 hover:text-sky-400 px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="#projects" class="text-gray-300 hover:text-sky-400 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#publications" class="text-gray-300 hover:text-sky-400 px-3 py-2 rounded-md text-sm font-medium">Publications</a>
+                        <a href="#skills" class="text-gray-300 hover:text-sky-400 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#contact" class="text-gray-300 hover:text-sky-400 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center bg-gray-900">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">
+                    Abhishek
+                </h1>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight gradient-text mb-6">
+                    Physics Researcher & Data Scientist
+                </h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-400 mb-8">
+                    Physics postgraduate with a passion for high-energy collisions, particle physics, and leveraging deep learning for data analysis in complex detector environments.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <!-- IMPORTANT: Upload 'Abhishek_CV.pdf' to the same GitHub repository as this file. -->
+                    <a href="./Abhishek_CV.pdf" download class="bg-sky-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-sky-600 transition duration-300">
+                        Download CV
+                    </a>
+                    <a href="#contact" class="bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">About Me</h2>
+                <div class="max-w-3xl mx-auto text-lg text-gray-400 space-y-6 text-left">
+                    <p>
+                        Hello! I am a recent Physics postgraduate from the National Institute of Science Education and Research (NISER), Bhubaneswar. My academic and research journey is rooted in particle physics, with a focus on studying high-energy collisions and developing advanced detector technologies.
+                    </p>
+                    <p>
+                        I have hands-on experience with simulation tools like GEANT4 and Pythia, and I apply deep learning models to enhance particle discrimination and data analysis. My master's thesis involved both simulation and experimental work, focusing on track reconstruction algorithms and building Resistive Plate Chambers for Muon Scattering Tomography. I am driven by a passion for solving complex problems and contributing to the scientific community.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">Education</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <p class="font-semibold text-sky-400">July 2019 - July 2024</p>
+                        <h3 class="text-xl font-bold text-white mt-1">Integrated M.Sc Physics (CGPA 8.36/10)</h3>
+                        <p class="text-gray-400">National Institute of Science Education and Research (NISER), Bhubaneshwar, India</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <p class="font-semibold text-sky-400">2018</p>
+                        <h3 class="text-xl font-bold text-white mt-1">Senior-Secondary School (Class-12th)</h3>
+                        <p class="text-gray-400">Central Board of Secondary Education (CBSE), Delhi, India</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Projects Section -->
+        <section id="projects" class="section">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">Research Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="card rounded-lg overflow-hidden flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold text-white mb-2">Developing Imaging Algorithms and RPCs for Muography Studies</h3>
+                            <p class="text-gray-400 mb-4">Master's thesis focusing on track reconstruction algorithms (POCA, BCA) and construction of Resistive Plate Chambers (RPCs) for Muon Scattering Tomography.</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <!-- EDIT: Add a link to your project report or source code -->
+                            <a href="#" class="text-sky-400 hover:text-sky-300 font-medium">View Report</a>
+                        </div>
+                    </div>
+
+                    <div class="card rounded-lg overflow-hidden flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold text-white mb-2">Classification of hadrons in Granular Hadron Calorimeters</h3>
+                            <p class="text-gray-400 mb-4">Using a deep learning model (Deep Sets) to improve discrimination power among protons, pions, and kaons by increasing hadron calorimeter granularity.</p>
+                        </div>
+                         <div class="p-6 pt-0">
+                            <!-- EDIT: Add a link to your project report or source code -->
+                            <a href="#" class="text-sky-400 hover:text-sky-300 font-medium">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="card rounded-lg overflow-hidden flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold text-white mb-2">Investigation of $\rho^{0}(770)$ Meson Production</h3>
+                            <p class="text-gray-400 mb-4">Studying the production of $\rho^{0}(770)$ mesons in pp collisions at $\sqrt{s}=13.6$ TeV using Pythia-generated events and invariant mass reconstruction.</p>
+                        </div>
+                         <div class="p-6 pt-0">
+                            <!-- EDIT: Add a link to your project report or source code -->
+                            <a href="#" class="text-sky-400 hover:text-sky-300 font-medium">View Details</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">Publications & Contributions</h2>
+                 <div class="max-w-3xl mx-auto text-lg text-gray-400 space-y-6 text-left">
+                    <ul class="list-disc list-outside space-y-4">
+                        <li>
+                            <span class="font-semibold text-white">First Author:</span> "A modular muon telescope for tomography and radiography applications," Nuclear Inst. and Methods in Physics Research, A.
+                            <a href="https://doi.org/10.1016/j.nima.2025.170399" target="_blank" class="text-sky-400 hover:underline ml-2">[Publication]</a>
+                        </li>
+                        <li>
+                           <span class="font-semibold text-white">Co-Author:</span> "Hadron Identification Prospects With Granular Calorimeters," at 4th MODE Workshop - Valencia (Spain).
+                        </li>
+                         <li>
+                           <span class="font-semibold text-white">Co-Author:</span> "Neuromorphic Readout for Homogeneous Hadron Calorimeters," MDPI Particles.
+                        </li>
+                         <li>
+                           <span class="font-semibold text-white">Co-Author:</span> "End-to-End Detector Optimization with Diffusion models: A Case Study in Sampling Calorimeters" MDPI Particles.
+                        </li>
+                         <li>
+                           <span class="font-semibold text-white">Presenter:</span> "Particle Identification in Highly Granular Calorimeters With Deep Sets" at Fifth MODE workshop Crete (Greece).
+                        </li>
+                    </ul>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">Technical Skills</h2>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Data Analysis</h3>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">ROOT</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">Python</span>
+                             <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">C++</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">Pandas</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">NumPy</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">Uproot</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">SciPy</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Simulation & Machine Learning</h3>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">GEANT4</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">Pythia</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">JAX</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">PyTorch</span>
+                             <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">Graph Neural Networks</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">DeepSets</span>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Tools & Hardware</h3>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">Git</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">JupyterLab</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">Linux</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">LaTeX</span>
+                            <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">ASIC</span>
+                             <span class="bg-gray-700 text-gray-200 text-md font-medium px-4 py-2 rounded-full">FPGA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <p class="text-lg text-gray-400 mb-8">I'm currently open to new opportunities. Feel free to reach out!</p>
+                <a href="mailto:abhishek.2019@niser.ac.in" class="inline-block bg-sky-500 text-white font-semibold py-3 px-8 rounded-lg hover:bg-sky-600 transition duration-300 mb-12">
+                    Say Hello
+                </a>
+                
+                <!-- Social Links -->
+                <div class="flex justify-center items-center space-x-6">
+                    <!-- EDIT: Add your full profile URLs here -->
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-white" title="GitHub">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-white" title="LinkedIn">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700">
+        <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <p>&copy; 2024 Abhishek. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
