@@ -57,6 +57,40 @@
             border-radius: 9999px;
             border: 2px solid #111827;
         }
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #38bdf8;
+            background: linear-gradient(135deg, #1f2937, #374151);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem auto;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+        }
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .profile-picture-placeholder {
+            color: #9ca3af;
+            font-size: 3rem;
+            font-weight: 300;
+        }
+        @media (max-width: 768px) {
+            .profile-picture {
+                width: 150px;
+                height: 150px;
+            }
+            .profile-picture-placeholder {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body class="text-gray-300">
@@ -86,6 +120,23 @@
         <!-- Hero Section -->
         <section id="home" class="min-h-screen flex items-center bg-gray-900">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Profile Picture -->
+                <!-- 
+                TO ADD YOUR PROFILE PICTURE:
+                1. Upload your profile picture file (e.g., profile.jpg, profile.png) to this repository
+                2. Replace the '#' in the src attribute below with the path to your image
+                3. Example: src="./profile.jpg" or src="./images/profile.png"
+                
+                The image will automatically be displayed in a beautiful circular frame with a blue border.
+                The placeholder with "A" will be hidden once a real image is loaded.
+                -->
+                <div class="profile-picture">
+                    <!-- Replace the src with your actual profile picture path when you upload it -->
+                    <!-- For now, it shows a placeholder. Upload your photo and update the src attribute -->
+                    <img src="#" alt="Abhishek's Profile Picture" style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="profile-picture-placeholder">A</div>
+                </div>
+                
                 <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">
                     Abhishek
                 </h1>
