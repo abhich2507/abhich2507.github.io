@@ -57,39 +57,15 @@
             border-radius: 9999px;
             border: 2px solid #111827;
         }
-        .profile-picture {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 4px solid #38bdf8;
-            background: linear-gradient(135deg, #1f2937, #374151);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem auto;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+        /* Style for scroll animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        .profile-picture img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        .profile-picture-placeholder {
-            color: #9ca3af;
-            font-size: 3rem;
-            font-weight: 300;
-        }
-        @media (max-width: 768px) {
-            .profile-picture {
-                width: 150px;
-                height: 150px;
-            }
-            .profile-picture-placeholder {
-                font-size: 2rem;
-            }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -120,28 +96,11 @@
         <!-- Hero Section -->
         <section id="home" class="min-h-screen flex items-center bg-gray-900">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <!-- Profile Picture -->
-                <!-- 
-                TO ADD YOUR PROFILE PICTURE:
-                1. Upload your profile picture file (e.g., profile.jpg, profile.png) to this repository
-                2. Replace the '#' in the src attribute below with the path to your image
-                3. Example: src="./profile.jpg" or src="./images/profile.png"
-                
-                The image will automatically be displayed in a beautiful circular frame with a blue border.
-                The placeholder with "A" will be hidden once a real image is loaded.
-                -->
-                <div class="profile-picture">
-                    <!-- Replace the src with your actual profile picture path when you upload it -->
-                    <!-- For now, it shows a placeholder. Upload your photo and update the src attribute -->
-                    <img src="#" alt="Abhishek's Profile Picture" style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="profile-picture-placeholder">A</div>
-                </div>
-                
                 <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">
                     Abhishek
                 </h1>
                 <h2 class="text-3xl md:text-4xl font-semibold tracking-tight gradient-text mb-6">
-                    PhD Student | Experimental High Energy Physics
+                    Physics Researcher & Data Scientist
                 </h2>
                 <p class="max-w-3xl mx-auto text-lg text-gray-400 mb-8">
                     Physics postgraduate with a passion for high-energy collisions, particle physics, and leveraging deep learning for data analysis in complex detector environments.
@@ -159,22 +118,38 @@
         </section>
 
         <!-- About Me Section -->
-        <section id="about" class="section">
+        <section id="about" class="section fade-in-section">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">About Me</h2>
-                <div class="max-w-3xl mx-auto text-lg text-gray-400 space-y-6 text-left">
-                    <p>
-                        Hello! I am a recent Physics postgraduate from the National Institute of Science Education and Research (NISER), Bhubaneswar. My academic and research journey is rooted in particle physics, with a focus on studying high-energy collisions and developing advanced detector technologies.
-                    </p>
-                    <p>
-                        I have hands-on experience with simulation tools like GEANT4 and Pythia, and I apply deep learning models to enhance particle discrimination and data analysis. My master's thesis involved both simulation and experimental work, focusing on track reconstruction algorithms and building Resistive Plate Chambers for Muon Scattering Tomography. I am driven by a passion for solving complex problems and contributing to the scientific community.
-                    </p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+                    <!-- EDIT: Profile Picture -->
+                    <div class="flex-shrink-0">
+                        <!-- 
+                            IMPORTANT: 
+                            1. Get a square (e.g., 400x400 pixels) professional photo of yourself.
+                            2. Name it something like 'profile-picture.jpg'.
+                            3. Upload it to the same GitHub repository as this file.
+                            4. Change the 'src' attribute below from the placeholder to './profile-picture.jpg'.
+                        -->
+                        <img 
+                            class="w-48 h-48 rounded-full object-cover border-4 border-sky-500/50 shadow-lg" 
+                            src="https://placehold.co/400x400/1f2937/FFFFFF?text=Abhishek" 
+                            alt="A profile picture of Abhishek">
+                    </div>
+                    <div class="max-w-xl text-lg text-gray-400 space-y-6 text-center md:text-left">
+                        <p>
+                            Hello! I am a recent Physics postgraduate from the National Institute of Science Education and Research (NISER), Bhubaneswar. My academic and research journey is rooted in particle physics, with a focus on studying high-energy collisions and developing advanced detector technologies.
+                        </p>
+                        <p>
+                            I have hands-on experience with simulation tools like GEANT4 and Pythia, and I apply deep learning models to enhance particle discrimination and data analysis. My master's thesis involved both simulation and experimental work, focusing on track reconstruction algorithms and building Resistive Plate Chambers for Muon Scattering Tomography. I am driven by a passion for solving complex problems and contributing to the scientific community.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
         
         <!-- Education Section -->
-        <section id="education" class="section">
+        <section id="education" class="section fade-in-section">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">Education</h2>
                 <div class="max-w-3xl mx-auto">
@@ -195,7 +170,7 @@
         </section>
 
         <!-- Research Projects Section -->
-        <section id="projects" class="section">
+        <section id="projects" class="section fade-in-section">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">Research Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -238,7 +213,7 @@
         </section>
 
         <!-- Publications Section -->
-        <section id="publications" class="section">
+        <section id="publications" class="section fade-in-section">
              <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">Publications & Contributions</h2>
                  <div class="max-w-3xl mx-auto text-lg text-gray-400 space-y-6 text-left">
@@ -265,7 +240,7 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="section">
+        <section id="skills" class="section fade-in-section">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">Technical Skills</h2>
                 <div class="max-w-4xl mx-auto space-y-8">
@@ -308,7 +283,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section">
+        <section id="contact" class="section fade-in-section">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-4xl font-bold text-white mb-4">Get In Touch</h2>
                 <p class="text-lg text-gray-400 mb-8">I'm currently open to new opportunities. Feel free to reach out!</p>
@@ -343,7 +318,30 @@
         </div>
     </footer>
 
+    <script>
+        // JavaScript for scroll animations
+        const sections = document.querySelectorAll('.fade-in-section');
+
+        const options = {
+            root: null, // it is the viewport
+            threshold: 0.1, // 10% of the item is visible
+            rootMargin: "0px"
+        };
+
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
 </body>
 </html>
-
 
